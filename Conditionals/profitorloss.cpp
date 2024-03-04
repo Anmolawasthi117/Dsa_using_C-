@@ -9,13 +9,17 @@ int main(){
     cin>>sp;
     cout<<"Enter the cost price : ";
     int cp;
+
     cin>>cp;
+    int profit=sp-cp;
+    int loss=cp-sp;
+
     if (cp<sp)
     {
-        cout<<" you are making profit";
+        cout<<" you are making profit of :"<<profit;
     }
     else{
-        cout<<" you are making loss";
+        cout<<" you are making loss of :"<<"-"<<loss;
     }
     
     
