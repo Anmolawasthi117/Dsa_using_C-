@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter the no of rows: ";
+    cin >> n;
+    int m;
+    
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << (char)(j+64)<<" ";
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+};
