@@ -15,7 +15,7 @@ vector <int > merg(vector <int >& v1, vector <int > &v2){
     int i = 0;
     int j = 0;
     int k = 0;
- while(i <= n && j <= m-1){
+ while(i <= n-1 && j <= m-1){
     if(v1[i] < v2[j]){
         v3[k] = v1[i];
         
