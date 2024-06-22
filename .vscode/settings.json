@@ -3,6 +3,7 @@
     "files.associations": {
         "iostream": "cpp",
         "iterator": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "vector": "cpp"
     }
 }
