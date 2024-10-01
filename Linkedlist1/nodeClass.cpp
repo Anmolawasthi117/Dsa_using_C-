@@ -10,7 +10,7 @@ public:
         this->val = val;
         this->next = NULL;
     }
-}
+};
 int main(){
     Node a(10);
     Node b(20);
@@ -21,5 +21,13 @@ int main(){
     b.next = &c;
     c.next = &d;
     d.next = NULL;
+    
+    Node temp = a;
+    while(1){
+        cout<<temp.val<<" ";
+        if(temp.next == NULL) break;
+        temp = *(temp.next);
+    }
+
     return 0;
 };
