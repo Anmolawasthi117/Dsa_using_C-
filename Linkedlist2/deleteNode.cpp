@@ -19,9 +19,9 @@ void display(Node* head){
     }
     cout<<endl;
 }
-void deleteNode(Node* head, Node* target){
+void deleteNode(Node* head, int targetval){
     Node* temp=head;
-    while(temp->next!=target){
+    while(temp->next->val!=targetval){
         temp=temp->next;
     }
     temp->next= temp->next->next;
@@ -35,7 +35,7 @@ int main(){
     b->next=c;
     c->next=d;
     display(a);
-    deleteNode(a,c);
+    deleteNode(a,30);
     display(a);
     return 0;
 };
