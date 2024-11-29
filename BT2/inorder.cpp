@@ -16,13 +16,13 @@ class TreeNode{//this is a tree node class
         this->left=NULL;
     }
 };
-void preorder(TreeNode* root){
+void inorder(TreeNode* root){
     if(root==NULL){
         return;
     }
+    inorder(root->left);
     cout<<root->val<<" ";
-    preorder(root->left);
-    preorder(root->right);
+    inorder(root->right);
 }
 
 void display(TreeNode* root){
@@ -52,6 +52,7 @@ int main(){
     d->left=h;
     display(a);
     cout<<endl;
+    inorder(a);
    
     return 0;
 };

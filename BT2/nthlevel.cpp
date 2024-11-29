@@ -16,6 +16,17 @@ class TreeNode{//this is a tree node class
         this->left=NULL;
     }
 };
+void elementOfNthLevel(TreeNode* root,int n){
+    if(root==NULL){
+        return;
+    }
+    if(n==1){
+        cout<<root->val<<" ";
+        return;
+    }
+    elementOfNthLevel(root->left,n-1);
+    elementOfNthLevel(root->right,n-1);
+}
 void preorder(TreeNode* root){
     if(root==NULL){
         return;
@@ -35,10 +46,10 @@ void display(TreeNode* root){
 }
 
 int main(){
-    TreeNode* a=new TreeNode(10);
+    TreeNode* a=new TreeNode(1);
     TreeNode* b=new TreeNode(2);
     TreeNode* c=new TreeNode(3);
-    TreeNode* d=new TreeNode(40);
+    TreeNode* d=new TreeNode(4);
     TreeNode* e=new TreeNode(5);
     TreeNode* f=new TreeNode(6);
     TreeNode* g=new TreeNode(7);
@@ -52,6 +63,7 @@ int main(){
     d->left=h;
     display(a);
     cout<<endl;
+    elementOfNthLevel(a, 3);
    
     return 0;
 };
