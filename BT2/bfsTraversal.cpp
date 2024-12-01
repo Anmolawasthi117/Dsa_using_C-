@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<queue>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -75,6 +76,31 @@ void RevlevelOrder(TreeNode* root){
         cout<<endl;
     }
 }
+void queueLeveOrder(TreeNode* root){
+    queue<TreeNode*> q;
+    q.push(root);
+    q.push(NULL);
+    while(!q.empty()){
+        TreeNode* temp=q.front();
+        q.pop();
+        if(temp==NULL){
+            cout<<endl;
+            if(!q.empty()){
+                q.push(NULL);
+            }
+        }
+        else{
+            cout<<temp->val<<" ";
+            if(temp->left){
+                q.push(temp->left);
+            }
+            if(temp->right){
+                q.push(temp->right);
+            }
+        }
+    }
+}
+
 
 int main(){
     TreeNode* a=new TreeNode(1);
